@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<!--<link rel="Shortcut Icon" type="image/ico" href="imgs/favicon.ico" />-->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+	<title>RXminder</title>
+  
+	<!-- CSS _____________________________________________-->
+
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/icomoon.css" media="screen" />
+	<link rel="stylesheet" href="css/magnificpopup.css" media="screen" />
+	<link rel="stylesheet" href="css/columns.min.css" media="screen" />
+	<link rel="stylesheet" href="style.css" media="screen" />  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$("gotIt").hide();
+			$("WhyNoTakeMeds").hide();
+			$("sentToDoc").hide();
+		    $("#yes").click(function(){
+		        $("text").hide();
+		        $("button").hide();
+		        $("gotIt").show();
+		    });
+		    $("#no").click(function(){
+		        $("text").hide();
+		        $("button").hide();
+		        $("WhyNoTakeMeds").show();
+		    });
+		    $("#submit").click(function() {
+		    	$("symptoms").hide();
+		    	$("sentToDoc").show()
+		    })
+		});
+	</script>
+
+</head>
+<body>
+
+	<!-- Loader _______________________________-->
+	<div class="loadreveal"></div>
+	<div id="loadscreen"><div id="loader"><span></span></div></div>
+
+	<!-- HEADER _____________________________________________-->
+	<header role="banner" id="header">
+			
+		<div class="wrapper">
+
+			<!-- Logo __-->
+			<h1 id="logo">
+				<a href="patientNew.html" rel="home"> 
+					<h2> RXMinder</h2>
+				</a>
+			</h1>
+		
+			<!-- Main menu __-->
+			<nav id="mainmenu" role="navigation">
+			
+				<div id="menu-burger"><i class="icon-menu"></i></div>
+				<div id="menu">
+					<ul>
+						<li class="current-menu-item"><a href="#">Home</a></li>
+						<li><a href="contactNew.html">Contact Us</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div> <!-- END .wrapper -->
+		
+	</header>
+
+	
+	
+	<!-- MAIN CONTENT SECTION  _____________________________________________-->
+	<section id="content" role="main">
+
+		<div class="wrapper">
+			<!-- WYSIWYG starts here __-->
+			
+			<div class="column-grid column-grid-2">
+				<div class="column column-span-1 column-push-0 column-first">
+					<div class="column-grid column-grid-2">
+						<div class="column column-span-2 column-push-0 column-first">
+							<h2> Medication Instructions:</h2>
+							<h3>1. Measure liquid medicine with the dosing syringe provided, or with a special dose-measuring spoon or medicine cup. Drink all of the mixture right away. Do not save any for later use.<br />
+							2. The chewable tablet should be chewed before you swallow it. <br />
+							3. Do not crush, chew, or break an extended-release tablet. Swallow it whole.<br /></h3>
+						</div>
+					</div>
+					<h2> 
+						<text> Did you take this pill from 11 AM to 1 PM? </text> </h2>
+						<h2><gotIt> Got It, Thanks! </gotIt> </h2>
+						
+						<WhyNoTakeMeds> <h2> If you've missed that time frame...</h2>
+							<h3>
+							Take the missed dose as soon as you remember. Skip the missed dose if it is almost time for your next scheduled dose. </br>
+							Do not take extra medicine to make up the missed dose. </h3></WhyNoTakeMeds>
+						<button id="yes">Yes</button>
+						<button id="no">No</button>
+						</br>
+						<symptoms>
+							<h2> Symptoms your experiencing?</h2>
+								<h3>
+	  							<input type="checkbox" name="Diarrhea" value="Diarrhea"> Diarrhea<br>
+	  							<input type="checkbox" name="Headache" value="Headache"> Headache<br>
+	  							<input type="checkbox" name="Dizziness" value="Dizziness"> Dizziness<br>
+	  							<input type="checkbox" name="Chills" value="Chills"> Chills<br>
+	  							<input type="checkbox" name="Coughing" value="Coughing"> Coughing<br>
+	  							<input id = "submit" type="submit" value="Submit"> </h3>
+						</symptoms>
+						<sentToDoc> <h2> Okay that information has been sent to your healthcare provider </h2> </sentToDoc>
+
+
+				</div>
+				<div class="column column-span-1 column-push-0 column-last">
+					<h2>Medication Video:</h2>
+					<iframe width="840" height="472" src="https://www.youtube.com/embed/WhWD4GHnNbY" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div>
+			
+			<!-- WYSIWYG ends here __-->
+		</div>
+		
+	</section>
+<!-- Javascripts ______________________________________-->
+<script src="js/jquery.min.js"></script> 
+<script src="js/retina.min.js"></script> 
+
+<!-- include image popups -->
+<script src="js/jquery.magnific-popup.min.js"></script> 
+<!-- include AJAX contact from -->
+<script src="contact/js/jquery.jigowatt.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="js/scripts.js"></script>
+
+</body>
+</html>
